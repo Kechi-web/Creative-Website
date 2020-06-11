@@ -1,0 +1,648 @@
+// Colors:
+$t: #222222
+$l: #ffffff
+$act: #11749e
+
+// Main
+html
+    overflow-x: hidden
+    body
+        font-family: 'Gotham', sans-serif 
+        font-weight: normal
+        font-style: normal
+        font-size: 15px
+        color: $t
+        background-color: $l
+        .btn
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 220px
+            height: 60px
+            padding: 20px 25px
+            background-color: $act
+            transition: all .3s
+            text-transform: uppercase
+            color: $l
+            margin: 50px auto 0
+            font-size: 24px
+            font-weight: 500
+            &:hover
+                background-color: lighten($act, 10%)
+        section
+            padding: 100px 0
+            .title
+                position: relative
+                padding: 70px 0 50px
+                font-size: calc(30px + 7 * (100vw / 1600))
+                z-index: 1
+                width: 100%
+                &::before
+                    content: ''
+                    text-transform: uppercase
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    z-index: 0
+                    font-size: 15rem
+                    font-weight: 700
+                    color: $t
+                    opacity: 0.2
+                    transform: translate(-50%,-50%)
+        a
+            color: inherit
+        .title
+            font-size: 37px
+            font-weight: 700
+            line-height: 1.2
+            color: inherit
+            text-transform: uppercase
+        .title-desc
+            font-size: 30px
+            font-weight: 400
+            line-height: 1.2
+            color: inherit
+        h2.subtitle
+            font-size: 25px
+            font-weight: 500
+            line-height: 1.4
+            color: inherit
+            text-transform: uppercase
+        h3.subtitle
+            font-size: 18px
+            font-weight: 500
+            line-height: 2
+            color: inherit
+            text-transform: uppercase
+        .text
+            font-size: 15px
+            font-weight: 400
+            line-height: 1.5
+            color: inherit
+        .header
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            color: $l
+            border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+            padding: 10px 0
+            z-index: 1000
+            &-dark
+                border-bottom: none
+                background-color: $t
+                opacity: 0.9
+            &__logo
+                width: 65px
+                height: 65px
+                background-color: rgba(255,255,255,0.7)
+                font-size: 30px
+                font-weight: 700
+                position: relative
+                &-link
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    position: absolute
+                    top: 0
+                    left: 0
+                    width: 100%
+                    height: 100%
+                    background-color: $act
+                    transition: all .2s
+                    &:hover
+                        transform: translate(-7px,-7px)
+            &__list
+                display: flex
+                justify-content: space-between
+                align-items: center
+                &-link
+                    font-size: 20px
+                    font-weight: 500
+                    position: relative
+                    transition: all .3s
+                    &::after
+                        content: ''
+                        position: absolute
+                        bottom: -165%
+                        opacity: 0
+                        left: 0
+                        width: 100%
+                        height: 4px
+                        background-color: $act
+                        transition: all .3s
+                    &:hover
+                        &::after
+                            opacity: 1
+            &__social
+                a
+                    display: inline-block
+                    font-size: 20px
+                    margin: 0px 10px
+                    i
+                        transition: all .3s ease
+                    &:hover
+                        i
+                            color: $act
+        .menu
+            display: none
+        .intro
+            width: 100%
+            min-height: 700px
+            height: 100vh
+            background-color: $t
+            background-image: url(../img/intro/bg.jpg)
+            background-repeat: no-repeat
+            background-size: cover
+            background-attachment: fixed 
+            color: $l
+            padding-top: 300px
+            text-align: center
+            position: relative
+            h1.title
+                font-size: calc(60px + 90 * (100vw / 1600))
+                text-transform: uppercase
+                font-weight: 700
+                padding: 0
+                &::before
+                    display: none
+            h2.subtitle
+                font-size: calc(20px + 5 * (100vw / 1600))
+                color: $act
+                font-weight: 500
+                line-height: 2
+                letter-spacing: 19px
+                margin-top: 0px
+            .scroll
+                position: absolute
+                bottom: 50px
+                left: 50%
+                transform: translate(-50%,0)
+                animation: scroll-move 2s ease-out infinite
+                &__btn
+                    margin: 15px auto 0
+                    width: 65px
+                    height: 65px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    border-radius: 50%
+                    border: 1px solid $l
+                @keyframes scroll-move
+                    0%
+                        bottom: 40px
+                    50%
+                        bottom: 50px
+                    100%
+                        bottom: 40px
+        .agency
+            width: 100%
+            background-color: $act
+            color: $l
+            text-align: center
+            .title
+                &::before
+                    content: 'w'
+                    color: $l
+            &__card
+                margin: 60px 10px 0 10px
+                &-icon
+                    margin: 0 auto
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    width: 133px
+                    height: 133px
+                    border-radius: 50%
+                    background-color: rgba(255, 255, 255, .2)
+                    font-size: 36px
+                    padding: 0
+                .ci1,.ci2
+                    padding-left: 10px
+                .subtitle
+                    margin: 25px 0
+        .news
+            width: 100%
+            color: $l
+            background-color: $l
+            padding: 0
+            &-dark
+                background-color: $t
+                color: $l
+                background-image: url(../img/news/1.png)
+                background-repeat: no-repeat
+                background-position: right
+                background-size: 50% 100%
+            &-light
+                background-color: $l
+                color: $t
+                background-image: url(../img/news/2.png)
+                background-repeat: no-repeat
+                background-position: left
+                background-size: 50% 100%
+                .news__body
+                    padding: 100px 15px 100px 60px
+                    margin-left: auto
+            &__body
+                width: 50%
+                padding: 100px 60px 100px 15px
+                .subtitle
+                    margin: 10px 0
+            &__date
+                font-size: 13px
+        .blog
+            width: 100%
+            background-color: $l
+            color: $t
+            text-align: center
+            .title
+                font-size: 37px
+                &::before
+                    content: 'B'
+                &-desc
+                    font-size: calc( 24px + 6px * (100vw / 1600))
+                    margin-bottom: 25px
+            &__card
+                margin-top: 50px
+                img
+                    max-height: 280px
+                    max-width: 270px
+                &-text
+                    margin-top: 20px
+                    .subtitle
+                        font-weight: 500
+                        color: $act
+                        margin-bottom: 10px
+        .action
+            width: 100%
+            background-color: $act
+            color: $l
+            text-align: left
+            &__item
+                margin: 20px 10px
+                i
+                    font-size: calc( 45px + 25 * (100vw / 1600))
+                .text
+                    padding: 0
+        .feature
+            width: 100%
+            background-color: $t
+            background-image: url(../img/feature/bg.jpg)
+            background-repeat: no-repeat
+            background-position: center
+            background-size: cover
+            background-attachment: fixed 
+            color: $l
+            .text
+                margin: 40px 0 0 0
+            img
+                margin: 0 auto
+                max-width: 300px
+                max-height: 510px
+            &__bar
+                margin-top: 60px
+                width: 100%
+                &-item
+                    display: flex
+                    align-items: center
+                    font-size: 15px
+                    font-weight: 500
+                    text-transform: uppercase
+                    background-color: transparent
+                    margin-top: 25px
+                    padding: 13px 20px
+                    min-height: 40px
+                    position: relative
+                    z-index: 0
+                    &::after
+                        content: ''
+                        position: absolute
+                        top: 0
+                        left: 0
+                        width: 1%
+                        height: 100%
+                        background-color: $act
+                        z-index: -1
+                    &.bar1
+                        &::after
+                            animation: bar1 2.5s ease-out forwards
+                    &.bar2
+                        &::after
+                            animation: bar2 2.5s ease-out forwards
+                    &.bar3
+                        &::after
+                            animation: bar3 2.5s ease-out forwards
+                    @keyframes bar1
+                        0%
+                            width: 1%
+                        100%
+                            width: 80%
+                    @keyframes bar2
+                        0%
+                            width: 1%
+                        100%
+                            width: 90%
+                    @keyframes bar3
+                        0%
+                            width: 1%
+                        100%
+                            width: 100%
+        .team
+            width: 100%
+            background-color: $l
+            text-align: center
+            color: $t
+            .title
+                &::before
+                    content: 'T'
+            .title-desc
+                margin: 20px 0 50px 0
+                padding: 0 15px
+                font-size: calc(24px + 6 * (100vw / 1600))
+            &__card
+                position: relative
+                margin-top: 20px
+                img
+                    max-width: 100%
+                    max-height: 410px
+                    margin: 0 auto
+                &-text
+                    display: flex
+                    flex-direction: column
+                    height: 120px
+                    width: 220px
+                    padding-top: 25px
+                    background-color: $l
+                    transform: translateY(-50%)
+                    margin: 0 auto
+                    .subtitle
+                        font-size: 20px
+                        color: $act
+                    .text
+                        font-weight: 600
+        .contact
+            width: 100%
+            background-color: $t
+            background-image: url(../img/contact/bg.jpg)
+            background-repeat: no-repeat
+            background-size: cover
+            background-position: center
+            background-attachment: fixed
+            color: $l
+            .title
+                text-align: center
+                font-size: calc(30px + 7 * (100vw / 1600))
+                &::before
+                    content: 'C'
+                    color: $l
+            &__form
+                text-align: left
+                width: 100%
+                margin: 0 auto
+                textarea
+                    width: 100%
+                    resize: none
+                    background-color: transparent
+                    border: 1px solid $l
+                    color: inherit
+                    font-size: 15px
+                    padding: 20px 25px
+                    margin-top: 20px
+                    &::placeholder
+                        color: inherit
+            &__input
+                width: 100%
+                background-color: transparent
+                border: 1px solid $l
+                color: inherit
+                font-size: 15px
+                padding: 20px 25px
+                margin: 15px 0
+                &::placeholder
+                    color: inherit
+        .map
+            width: 100%
+            background-color: $l
+            iframe
+                width: 100%
+                min-height: 330px
+        .footer
+            width: 100%
+            background-color: $t
+            color: $l
+            padding: 50px 0
+            text-align: center
+@media screen and ( max-width: 992px )
+    html
+        body
+            .feature
+                img
+                    display: none
+            .news
+                &-dark
+                    border-bottom: 3px solid lighten($t, 20%)
+                &-light
+                    border-top: 3px solid lighten($t, 20%)
+                &-dark,&-light
+                    background-position: center top
+                    background-size: cover
+                    position: relative
+                    color: $l
+                    z-index: 0
+                    &::after
+                        content: ''
+                        position: absolute
+                        width: 100%
+                        height: 100%
+                        top: 0
+                        left: 0
+                        background-color: $t
+                        opacity: 0.9
+                        z-index: -1
+                    .news__body
+                        width: 100%
+                        padding: 100px 0
+            .header
+                &__list,&__social
+                    display: none
+            .wrapper
+                position: relative
+                .content
+                    transition: all .5s
+                    position: relative
+                    z-index: 0
+                    &-act
+                        transform: translateX(-40%)
+                .menu
+                    position: fixed
+                    top: 0
+                    right: 0
+                    width: 40%
+                    z-index: 1010
+                    height: 100vh
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    background-color: $t
+                    transition: all 0.5s
+                    transform: translateX(100%)
+                    &-act
+                        transform: translateX(0%)
+                    &__link
+                        position: absolute
+                        top: 25px
+                        left: -60px
+                        width: 30px
+                        height: 30px
+                        background-color: transparent
+                        display: flex
+                        justify-content: center
+                        flex-direction: column
+                        cursor: pointer
+                        span
+                            width: 100%
+                            height: 3px
+                            background-color: #fff
+                            border-radius: 30px
+                            transition: all .3s
+                            &:nth-child(1)
+                                width: 50%
+                                transform: translateY(-6px)
+                            &:nth-child(3)
+                                width: 50%
+                                transform: translateY(6px)
+                                align-self: flex-end
+                        &-act
+                            span
+                                width: 100%
+                                transition: all .3s
+                                &:nth-child(1)
+                                    width: 100%
+                                    transform: translateY(3px) rotate(45deg)
+                                &:nth-child(2)
+                                    opacity: 0
+                                    transform: translateY(0px)
+                                &:nth-child(3)
+                                    width: 100%
+                                    transform: translateY(-3px) rotate(-45deg)
+                    &__list
+                        display: flex
+                        justify-content: space-around
+                        align-items: center
+                        height: 50%
+                        flex-direction: column
+                        text-align: center
+                        a 
+                            display: block
+                            padding: 10px 0
+                            margin: 5px 0
+                            text-decoration: none
+                            text-transform: uppercase
+                            font-weight: 900
+                            color: $l
+                            width: 100%
+                            transition: all .3s ease
+                            &:hover,&:active
+                                color: $act
+                    &__social
+                        display: flex
+                        a
+                            display: inline-block
+                            font-size: 20px
+                            margin: 0px 10px
+                            i
+                                transition: all .3s ease
+                            &:hover
+                                i
+                                    color: $act                    
+@media screen and ( max-width: 767px )
+    html
+        body
+            .contact
+                .title
+                    font-size: calc(30px + (7 + 7 *0.7) * ((100vw - 320px) / 1600))
+            section
+                padding: 70px 0
+            .intro
+                h1.title
+                    font-size: calc(60px + (90 + 90 *0.7) * ((100vw - 320px) / 1600))
+                h2.subtitle
+                    font-size: calc(20px + (5 + 5 * 0.7) * ((100vw - 320px) / 1600))
+            .agency
+                .title
+                    font-size: calc(30px + (7 + 7 *0.7) * ((100vw - 320px) / 1600))
+            .blog
+                .title
+                    font-size: 37px
+                    &-desc
+                        font-size: calc(24px + (6 + 6 *0.7) * ((100vw - 320px) / 1600))
+                &__card
+                    display: flex
+                    img
+                        width: 40%
+                    &-text
+                        text-align: left
+                        margin: 0 0 0 20px
+            .action
+                &__item
+                    margin: 25px 0
+                    i
+                        font-size: calc( 45px + (25 + 25 * 0.7) * ((100vw - 320px) / 1600))
+@media screen and ( max-width: 575px )
+    html
+        body
+            .wrapper
+                .content
+                    &-act
+                        transform: translateX(-100%)
+                .menu
+                    width: 100%
+                    &-act
+                        .menu__link
+                            transition: all .5s
+                            left: 5%
+            .intro
+                padding-top: 200px
+                h2.subtitle
+                    letter-spacing: 6px
+                    margin-top: 20px
+            .blog
+                &__card
+                    display: block
+                    img
+                        max-width: 100%
+                        min-width: 60%
+                    &-text
+                        width: 70%
+                        text-align: center
+                        margin: 20px auto 0 auto
+            .team
+                .title-desc
+                    font-size: calc(24px + (6 + 6 *0.7) * ((100vw - 320px) / 1600))
+@media screen and ( max-width: 375px )
+    html
+        body
+            .blog
+                &__card
+                    img
+                        width: 100%
+                    &-text
+                        width: 100%
+            .footer
+                padding: 25px 0
+@media screen and ( max-width: 320px )
+    html
+        body
+            .action
+                &__item
+                    flex-direction: column
+                    padding: 0
+                    .col-9
+                        width: 100%
+                        padding: 0
+                    i
+                        margin-bottom: 25px
+                    .text
+                        width: 100%
+                        padding: 0
+                        font-size: 14px
